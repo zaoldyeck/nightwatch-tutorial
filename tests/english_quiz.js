@@ -1,0 +1,37 @@
+module.exports = {
+    'Start English Test': function (browser) {
+        browser
+            .url('http://quiz.airvdo.com').waitForElementVisible('body', 1000)
+            .click("#Q0A1").pause(1000)
+            .click("#Q1A0").pause(1000)
+            .click("#Q2A0").pause(1000)
+            .click("#Q3A0")
+            .click("#Q3A1")
+            .click("#Q3A2")
+            .click("#Q3A3")
+            .click("#Q3Confirm").pause(1000)
+            .click("#Q4A0").pause(1000)
+            .click("#Q5A2").pause(1000)
+            .click("#Q6A2").pause(1000)
+            .click("#Q7A1").pause(1000)
+            .click("#Q8A1").pause(1000)
+            .click("#Q9A1").pause(1000)
+            .click("#Q10A1").pause(1000)
+            .click("#Q11A0").pause(1000)
+            .click("#Q12T").pause(1000)
+            .click("#Q13T").pause(1000)
+            .click("#Q14F").pause(1000)
+            .click("#Q15F")
+            .setValue('input[name=name]', 'test')
+            .setValue('input[name=cellPhone]', '0999999999')
+            .setValue('input[name=email]', 'test@sien.com')
+            .setValue('select[name=age_area]', '26~35歲')
+            .setValue('select[name=city]', '高雄市').pause(1000)
+            .click("label[for=sex-man]")
+            .click("#policyCheckbox")
+            .click(".quizButton")
+            .assert.containsText("#ans_pop h2", "貓頭鷹")
+            .assert.containsText(".animal_sp", "你是相當機智、聰明、應變能力強的貓頭鷹，\n喜歡分析問題與找答案。在英語能力上已有相當穩定，\n但是使用上缺乏精準度，\n稍微複雜的語句容易出錯。")
+            .end();
+    }
+};
