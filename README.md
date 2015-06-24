@@ -1,2 +1,1 @@
 # nightwatch-tutorial
-# nightwatch-tutorial
