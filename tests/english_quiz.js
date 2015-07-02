@@ -29,7 +29,7 @@ module.exports = {
             .setValue('select[name=city]', '高雄市').pause(1000)
             .click("label[for=sex-man]")
             .click("#policyCheckbox")
-            .click(".quizButton")
+            .click(".quizButton").waitForElementVisible("#ans_pop",5000)
             .assert.containsText("#ans_pop h2", "貓頭鷹")
             .assert.containsText(".animal_sp", "你是相當機智、聰明、應變能力強的貓頭鷹，\n喜歡分析問題與找答案。在英語能力上已有相當穩定，\n但是使用上缺乏精準度，\n稍微複雜的語句容易出錯。")
             .end();
